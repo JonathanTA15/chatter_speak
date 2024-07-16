@@ -1,1 +1,2 @@
 Program ini mencakup implementasi program chat sederhana menggunakan teknologi websocket yang kami beri nama 'Chatter Speak'. Program ini memungkinkan pengguna untuk berinteraksi secara real-time melalui web. Pengguna dapat mengaksesnya dengan menjalankan perintah 'node server.js' di terminal, dan selanjutnya membuka 'index.html' untuk memulai pengalaman berkomunikasi yang dinamis dan interaktif.
+Jangan lupa untuk menjalannya menggunakan http://localhost:3000/
