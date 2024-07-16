@@ -1,8 +1,7 @@
-// server.js
-
 const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
+const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
@@ -10,6 +9,14 @@ const wss = new WebSocket.Server({ server });
 
 // Array untuk menyimpan pengguna aktif
 let users = [];
+
+// Menyediakan file statis dari folder public
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Menyediakan file index.html saat root URL diakses
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 wss.on('connection', function connection(ws) {
     // Menambahkan pengguna baru ke daftar users
