@@ -69,3 +69,19 @@ hr {
 #message-form button:hover {
     background-color: #00457e; /* Warna background saat tombol dihover */
 }
+
+@media (min-width: 600px) {
+    #message-form {
+        flex-direction: row;
+    }
+
+    #message-form input {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    #message-form button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
